@@ -42,42 +42,8 @@ public class CityController {
 
     	System.out.println("Hello, AuthSnippets!");
 
-        // Initialize Firebase
-        try {
-          // [START initialize]
-        	
-        	 FileInputStream serviceAccount = new FileInputStream("service-account.json");
-             FirebaseOptions options;
-    			try {
-    				options = new FirebaseOptions.Builder()
-    				        .setCredential(FirebaseCredentials.fromCertificate(serviceAccount))
-    				        .setDatabaseUrl(DATABASE_URL)
-    				        .build();
-    				  FirebaseApp.initializeApp(options);
-    			} catch (IOException e) {
-    				// TODO Auto-generated catch block
-    				e.printStackTrace();
-    			}
-//        	
-//          FileInputStream serviceAccount = new FileInputStream("service-account.json");
-//          FirebaseOptions options = new FirebaseOptions.Builder()
-//              .setCredential(FirebaseCredentials.fromCertificate(serviceAccount))
-//              .build();//      FirebaseApp.initializeApp(options);
-          // [END initialize]
-        } catch (IOException e) {
-          System.out.println("ERROR: invalid service account credentials. See README.");
-          System.out.println(e.getMessage());
-
-          System.exit(1);
-        }
-//        ServiceFireBase mn = new ServiceFireBase();
-//        //mn.deleteAll();
-//        mn.service();
         
-        ServiceVehicleCharge serviceVehicleCharge = new ServiceVehicleCharge();
-        serviceVehicleCharge.ServiceCalculate();
-
-
+        
     	 
 		return arr;
     
